@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "liberation Mono", Arial, Helvetica, sans-serif;
+    line-height: 1.2rem;
+    scroll-behavior: smooth;
+}
+
+.container{
+    padding:2rem;
+}
+
+/* Navabar */
+
+#navbar{
+    background: linear-gradient(to bottom, rgb(90, 6, 6), rgb(177, 11, 11));
+    color: #fff;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.list-collection{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.list-item{
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.list-collection .list-item a{
+    color: #fff;
+    text-decoration: none;
+}
