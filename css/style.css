@@ -5,25 +5,93 @@
 }
 
 body{
-    font-family: "liberation Mono", Arial, Helvetica, sans-serif;
+    font-family: "Aakar", Arial, Helvetica, sans-serif;
     line-height: 1.2rem;
     scroll-behavior: smooth;
 }
+
+/* Utilities */
 
 .container{
     padding:2rem;
 }
 
+.lead{
+    color: rgb(243, 9, 9);
+}
+
+
+/* Green */
+.green {
+    border-color: #4CAF50;
+    color: green;
+  }
+  
+  .green:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* Blue */
+  .blue {
+    border-color: #2196F3;
+    color: dodgerblue
+  }
+  
+  .blue:hover {
+    background: #2196F3;
+    color: white;
+  }
+  
+  /* Orange */
+  .orange {
+    border-color: #ff9800;
+    color: orange;
+  }
+  
+  .orange:hover {
+    background: #ff9800;
+    color: white;
+  }
+  
+  /* Red */
+  .red {
+    border-color: #f44336;
+    color: red
+  }
+  
+  .red:hover {
+    background: #f44336;
+    color: white;
+  }
+  
+  /* Gray */
+  .gray {
+    border-color: #e7e7e7;
+    color: black;
+  }
+  
+  .gray:hover {
+    background: #e7e7e7;
+  }
+
 /* Navabar */
 
 #navbar{
-    background: linear-gradient(to bottom, rgb(90, 6, 6), rgb(177, 11, 11));
+    background: linear-gradient(to right, rgb(39, 1, 1), rgb(70, 2, 2));
     color: #fff;
     padding: 2rem 4rem;
     display: flex;
     justify-content: space-between;
     font-size: 1.2rem;
     cursor: pointer;
+    font-weight: 1000;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+#navbar h1{
+    transition: all linear 2s;
 }
 
 .list-collection{
@@ -35,8 +103,172 @@ body{
 .list-item{
     margin: 0 1rem;
     cursor: pointer;
+    transition: all linear 2s;
 }
-.list-collection .list-item a{
+.list-collection .list-item a, #navbar h1 a{
     color: #fff;
     text-decoration: none;
 }
+
+.list-item:hover, #navbar h1:hover{
+    background: rgba(235, 8, 8, 0.733);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding:0 0.6rem;
+}
+
+.container-one{
+    background: url("../images/bg-one.jpg") no-repeat fixed center/cover;
+    height:100vh;
+}
+
+.container-content{
+    position: absolute;
+    top: 5.8rem;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    padding: 3rem 1rem;
+}
+
+label{
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: #ffff;
+    font-size: 1.2rem;
+}
+
+input{
+    width: 20%;
+    padding: 0.5rem 0.6rem;
+    border: none;
+    border-radius: 5px;
+    outline-color: floralwhite;
+}
+
+/* Hide number overflow */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Button */
+
+.button-container{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+button{
+    margin: 0.5rem 2rem;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: .7rem 1rem;
+    background-color: #fff;
+    color: black;
+    font-size: 1rem;
+    transition: linear 1s;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+#navbar{
+    display: block;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.logo{
+    margin: 0.8rem 0;
+}
+
+.list-collection{
+    display: inline-block;
+}
+.list-item{
+    margin-bottom: 0.6rem;
+    border-bottom: 1px dashed #fff;
+}
+
+.container{
+    padding: 0 ;
+}
+
+.container-content{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input{
+    display: block;
+    width: 100%;
+    margin-bottom: 0.9rem;
+}
+button{
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+    #navbar{
+        display: flex;
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    
+    .logo{
+        margin: 0.8rem 0;
+    }
+    
+    .list-collection{
+        display: flex;
+        height: 1rem;
+        padding-top: 1.2rem;
+        justify-content: space-around;
+    }
+    
+    .container{
+        padding: 0 ;
+    }
+    
+    .container-content{
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    input{
+        display: block;
+        width: 100%;
+        margin-bottom: 0.9rem;
+    }
+    button{
+        padding: 0.3rem 0.5rem;
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
