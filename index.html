@@ -27,11 +27,23 @@
                 <label for="numberOfPages">Numbers Of Pages:</label>
                 <input type="number" id="numberOfPages">
                 <div class="button-container">
-                    <button id="" class="gray">Add Book</button>
-                    <button id="" class="gray">View Store</button>
+                    <button onclick="addBook()" class="gray">Add Book</button>
+                    <button onclick="displayBook()" class="gray">View Store</button>
                 </div>
+               <table style="color: beige;" border="2">
+                   <tr>
+                       <th>S/N</th>
+                       <th>Name Of Book</th>
+                       <th>Name Of Author</th>
+                       <th>Numbers Of Pages</th>
+                   </tr>
+                   <tbody id="tableBody">
+                       
+                   </tbody>
+               </table> 
             </div>
         </div>
     </section>
 </body>
+<script src="app.js"></script>
 </html>

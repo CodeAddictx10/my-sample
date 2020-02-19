@@ -138,6 +138,7 @@ label{
     margin-left: 0.5rem;
     color: #ffff;
     font-size: 1.2rem;
+    font-weight: 1000;
 }
 
 input{
@@ -173,6 +174,28 @@ button{
     transition: linear 1s;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 2px solid rgb(112, 28, 28);
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+th{
+    background-color: #180202;
+    font-weight: 900;
+
+}
+tr:nth-child(even) {
+    background-color: #440606
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px){
 #navbar{
@@ -204,9 +227,6 @@ button{
     left: 0;
     right: 0;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 input{
@@ -239,6 +259,9 @@ button{
         padding-top: 1.2rem;
         justify-content: space-around;
     }
+    .list-item{
+        border: none;
+    }
     
     .container{
         padding: 0 ;
@@ -250,9 +273,6 @@ button{
         left: 0;
         right: 0;
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
     }
     
     input{
@@ -266,6 +286,78 @@ button{
     }
 
 }
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #navbar{
+      display: flex;
+      padding: 1rem 2rem;  
+    }
+
+    .container-one{
+        padding: 0;
+    }
+    .container-content{
+        padding: 2rem 1rem;
+        position: absolute;
+        top: 5.1rem;
+        left: 0;
+        right: 0;
+        height:100vh;
+    }
+
+    label{
+        display: inline-block;
+        margin: 0;
+        font-size: .9rem;
+    }
+
+    input{
+        display: inline-block;
+        width: 15%;
+        padding: 0.1rem 0.3rem;
+    }
+
+    button{
+        padding: 0.3rem 0.5rem;
+    }
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #navbar{
+        font-size: 1rem;
+        padding: 1rem 3rem;
+    }
+
+    input{
+        width: 20%;
+
+    }
+
+    button{
+        padding: 0.1rem 0.2rem;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #navbar{
+        font-size: 1.3rem;
+    }
+    
+    input{
+        width: 22%;
+        padding: 0.4rem 0.6rem;
+    }
+
+    button{
+        padding: 0.5rem 1rem;
+    }
+
+}
+
 
 
 
