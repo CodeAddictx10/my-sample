@@ -30,12 +30,19 @@
                     <button onclick="addBook()" class="gray">Add Book</button>
                     <button onclick="displayBook()" class="gray">View Store</button>
                 </div>
+                <label for="search">Search Book</label>
+                <input type="text" id="search" placeholder="Search Book">
+                <button onclick="searchBook()">Search Book</button>
+                <div id="res">The local Storage is currently empty, please fill in the field and add Book and refresh
+                </div>
                <table style="color: beige;" border="2">
                    <tr>
                        <th>S/N</th>
                        <th>Name Of Book</th>
                        <th>Name Of Author</th>
                        <th>Numbers Of Pages</th>
+                       <th>Remove</th>
+                       <th>Edit</th>
                    </tr>
                    <tbody id="tableBody">
                        

@@ -75,6 +75,26 @@ body{
     background: #e7e7e7;
   }
 
+  #res{
+      padding: 1.5rem;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bolder;
+      display: none;
+  }
+  #del{
+      font-size: 0.5rem;
+      padding: 0.3rem 0.5rem;
+      outline: none;
+      cursor: pointer;
+  }
+  #edit{
+      font-size: 0.5rem;
+      padding: 0.3rem 0.5rem;
+      outline: none;
+      cursor: pointer;
+  }
+
 /* Navabar */
 
 #navbar{
@@ -183,14 +203,16 @@ table {
 
 th, td {
     text-align: left;
-    padding: 16px;
+    padding: 10px;
     text-align: center;
-    font-size: 1.2rem;
 }
 th{
     background-color: #180202;
     font-weight: 900;
 
+}
+td{
+    font-size: 1.2rem;
 }
 tr:nth-child(even) {
     background-color: #440606
