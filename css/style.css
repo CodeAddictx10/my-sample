@@ -8,6 +8,7 @@ body{
     font-family: "Aakar", Arial, Helvetica, sans-serif;
     line-height: 1.2rem;
     scroll-behavior: smooth;
+    background: url("../images/bg-one.jpg") no-repeat fixed center/cover;
 }
 
 /* Utilities */
@@ -109,6 +110,7 @@ body{
     position: sticky;
     top: 0;
     z-index: 1;
+    margin-bottom: 0;
 }
 #navbar h1{
     transition: all linear 2s;
@@ -139,18 +141,18 @@ body{
 }
 
 .container-one{
-    background: url("../images/bg-one.jpg") no-repeat fixed center/cover;
-    height:100vh;
+    
+    height:1000px;
 }
 
 .container-content{
     position: absolute;
-    top: 5.8rem;
+    top: 4rem;
     right: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.7);
     height: 100%;
-    padding: 3rem 1rem;
+    padding: 0rem 1rem;
 }
 
 label{

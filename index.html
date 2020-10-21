@@ -1,56 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../fontawesome-free-5.12.1-web/css/all.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../fontawesome-free-5.12.1-web/css/all.min.css">
     <title>BookSelf</title>
 </head>
-<body>
-    <nav id="navbar">
-            <h1 class="logo"><a href="#"><span class="lead"><i class="fas fa-book-open"></i>Book</span>Self</a></h1>
-            <ul class="list-collection">
-                <li class="list-item"><a href="#"><span class="lead"><i class="fas fa-undo"></i>About</span> Us</a></li>
-                <li class="list-item"><a href="#"><span class="lead"><i class="fas fa-phone-alt"></i>Contact</span> Us</a></li>
-                <li class="list-item"><a href="#"><span class="lead"><i class="fas fa-fan"></i>Learn</span> More</a></li>
-            </ul>
-    </nav>
+<style>
 
-    <section class="container-one">
-        <div class="container">
-            <div class="container-content">
-                <label for="bookname">Name Of Book:</label>
-                <input type="text" id="bookname">
-                <label for="nameOfAuthor">Name Of Author:</label>
-                <input type="text" id="nameOfAuthor">
-                <label for="numberOfPages">Numbers Of Pages:</label>
-                <input type="number" id="numberOfPages">
-                <div class="button-container">
-                    <button onclick="addBook()" class="gray">Add Book</button>
-                    <button onclick="displayBook()" class="gray">View Store</button>
+    nav{
+        border-bottom: 2px rgb(0, 0, 0) solid !important;
+    }
+    h1{
+        cursor: pointer !important;
+    }
+
+    /* Hide number overflow */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+    }
+    .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #444;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(225, 225, 255, 0.25);
+}
+</style>
+<body class="bg-black">
+    <div class="container-fluid px-0">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark mb-4 p-1 mt-2">
+                <!-- Brand -->
+                <h1 href="#" class="display-5 text-dark font-weight-bold"><span class="text-danger"><i class="fas fa-book-open"></i>Book</span>Self</>
+            </nav>
+        </header>
+
+        <section class="px-4">
+            <div class="form">
+                <div class="row">
+                    <div class="form-group col-4">
+                          <label for="numberOfPages" class="font-weight-bold">Rack No</label>
+                          <input type="number" class="form-control form-control-sm" id="numberOfPages">
+                    </div>
+                    <div class="form-group col-4">
+                          <label for="nameOfAuthor" class="font-weight-bold">Lot No</label>
+                          <input type="text" class="form-control form-control-sm" id="nameOfAuthor">
+                    </div>
+                    <div class="form-group col-4">
+                          <label for="bookname" class="font-weight-bold">Project Title</label>
+                          <input type="text" id="bookname" class="form-control form-control-sm d-inline">
+                    </div>
                 </div>
-                <label for="search">Search Book</label>
-                <input type="text" id="search" placeholder="Search Book">
-                <button onclick="searchBook()">Search Book</button>
-                <div id="res">The local Storage is currently empty, please fill in the field and add Book and refresh
+
+                <div class="row">
+                    <div class="form-group col-4">
+                          <label for="company" class="font-weight-bold">Company Name</label>
+                          <input type="text" id="company" class="form-control form-control-sm">
+                    </div>
+                    <div class="form-group col-4">
+                          <label for="year" class="font-weight-bold">Year</label>
+                          <input type="number" id="year" class="form-control form-control-sm">
+                    </div>
                 </div>
-               <table style="color: beige;" border="2">
-                   <tr>
-                       <th>S/N</th>
-                       <th>Name Of Book</th>
-                       <th>Name Of Author</th>
-                       <th>Numbers Of Pages</th>
-                       <th>Remove</th>
-                       <th>Edit</th>
-                   </tr>
-                   <tbody id="tableBody">
-                       
-                   </tbody>
-               </table> 
+                <div class="row">
+                    <div class="mx-auto">
+                        <button onclick="addBook()" class="btn btn-success px-3 mr-4" id="addBook">Add Book</button>
+                        <button onclick="displayBook()" class="btn btn-warning px-3">View Store</button>
+                    </div>
+                </div>
+
+                <div class="row col-4 mt-4">
+                    <div class="input-group mb-3">
+                        <input type="text" id="search" placeholder="Search Document" class="form-control" placeholder="Search document by project title or company name">
+                        <div class="input-group-append">
+                          <button class="btn btn-success" onclick="searchBook()">Search</button>
+                        </div>
+                      </div>
+                </div>
             </div>
-        </div>
-    </section>
+
+            <div class="container col-12 mt-4">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Rack No</th>
+                        <th>Lot No</th>
+                        <th>Project title</th>
+                        <th>Company Name</th>
+                        <th>Year</th>
+                        <th>Remove</th>
+                        <th>Edit</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody">
+
+                </tbody>
+                </table>
+              </div>
+              
+        </section>
+
+    </div>
+
+                <!-- <div id="res">The local Storage is currently empty, please fill in the field and add Book and refresh
+                </div> -->
 </body>
 <script src="app.js"></script>
+
 </html>
