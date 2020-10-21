@@ -127,7 +127,6 @@ function addBook() {
 // DISPLAY TABLE WHEN VIEW STORE IS CLICK
 
 function displayBook() {
-  location.reload();
   self();
 }
 
@@ -155,7 +154,6 @@ function self() {
 
     tableBody.innerHTML = tbody;
   } else {
-    location.reload();
     alert(
       "There is no document in the self currently, kindly add a document and check back"
     );
