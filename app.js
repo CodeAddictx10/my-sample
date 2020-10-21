@@ -157,6 +157,7 @@ function self() {
     alert(
       "There is no document in the self currently, kindly add a document and check back"
     );
+    location.reload()
   }
 }
 
